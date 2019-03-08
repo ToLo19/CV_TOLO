@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Josefin+Sans|Courgette|Raleway');
+body{
+	margin: 0;
+    background-color: #87CEFA;
+}
+input{
+    display: flex;
+    margin: 20px;
+}
+button{
+    cursor: pointer;
+}
+#info > div{
+    position: relative;
+}
+#buttonLang{
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+}
+#buttonConfirm{
+    margin-left: 20px;
+}
