@@ -6,24 +6,25 @@
     <title>CV online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="cv.css">
-    <script src="cv.js"></script>
+    <!-- <script src="cv.js"></script> -->
 </head>
 <body>
-    <h1>Welcome to our page</h1>
-    <div id="info">
-        <input id="firstname" type="text" placeholder="Firstname">
-        <input id="lastname" type="text" placeholder="Lastname">
-        <div id="divLang">
-            <button id="buttonLang" onclick="createInput()">+</button>
-            <input class="language" type="text" placeholder="Language">
-        </div>  
-        <button id="buttonConfirm" onclick="confirm()">Confirm</button>
-    </div>
-    <div id="CVstyle">
-
-    </div>
-    
+    <section id="generator">
+        <!-- user information -->
+       <div>
+            <input type="text" placeholder="firstName" id="firstName">
+            <input type="text" placeholder="lastName" id="lastName">
+           
+            <input type="submit" onclick="takeUserInformation()">
+       </div>
+    </section>
 
 
+    <section id="cvTemplate">
+        <div id="userInformation">
+
+        </div>
+    </section>
+    <script src="./cv.js"></script>
 </body>
 </html>

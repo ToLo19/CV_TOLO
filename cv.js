@@ -1,23 +1,32 @@
-// let createInput = () => {
-//     let divLang = document.getElementById('divLang');
-//     let input = document.createElement('input');
-//     input.setAttribute('class', 'language');
-//     input.setAttribute('placeholder', 'One more language');
-//     divLang.appendChild(input);
-// }
+const idTag = (id) => {
+    return document.getElementById(id).value
+}
+/// content Tag
+const userInfo= document.getElementById('userInformation')
 
-// class User {
-//     constructor(FirstName, LastName) {
-//         this.firstname = FirstName;
-//         this.lastname = LastName;
-//     }
-  
-//     confirm () {
-//         let langValue = document.getElementById('firstname').value;
-//         let createP = document.createElement('p');
-//         createP.innerHTML = langValue;
-//         CVstyle.appendChild(createP);
-//     }
 
-// }
-// let user = new User('Diego', 'Costa');
+class UserInfo {
+    constructor(firstName,lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    createUserInformation() {
+        let ul = document.createElement('ul');
+        let li = document.createElement('li');
+        li.innerHTML = this.firstName;
+        ul.appendChild(li);
+        userInfo.appendChild(ul)
+    
+    }
+}
+
+const takeUserInformation = () => {
+    
+    const firstName = idTag('firstName');
+    const lastName = idTag('lastName');
+    const userInfo = new UserInfo(firstName,lastName);
+    console.log(firstName)
+    return userInfo.createUserInformation()
+
+}
+
