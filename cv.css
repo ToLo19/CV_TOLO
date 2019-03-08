@@ -3,6 +3,12 @@ body{
 	margin: 0;
     background-color: #87CEFA;
 }
+ul{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
 input{
     display: flex;
     margin: 20px;

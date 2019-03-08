@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="cv.css">
+</head>
+<body>
+    <section id="generator">
+        <!-- user information -->
+       <div>
+            <input type="text" placeholder="Firstname" id="firstName">
+            <input type="text" placeholder="Lastname" id="lastName">
+            <input type="number" placeholder="Phone number" id="number">
+           
+            <input type="submit" onclick="takeUserInformation()">
+       </div>
+    </section>
+
+    
+    <section id="cvTemplate">
+        <!-- template -->
+        <div id="userInformation">
+
+        </div>
+    </section>
+    <script src="./cv.js"></script>
+</body>
+</html>
