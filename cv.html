@@ -3,29 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CV online</title>
+    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="cv.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="cv new.css">
+    <script src="cv new.js"></script>
 </head>
 <body>
-    <section id="generator">
-        <!-- user information -->
-       <div>
-            <input type="text" placeholder="Firstname" id="firstName">
-            <input type="text" placeholder="Lastname" id="lastName">
-            <input type="number" placeholder="Phone number" id="number">
-           
-            <input type="submit" onclick="takeUserInformation()">
-       </div>
+    <section>
+        <div id="userInfo">
+            <input type="text" id="firstname">
+            <input type="text" id="lastname">
+            <input type="number" id="phone">
+            <button id="buttonConfirm" onclick="createNewUser()">Confirm</button>
+        </div>
     </section>
 
-    
-    <section id="cvTemplate">
-        <!-- template -->
-        <div id="userInformation">
+    <section>
+        <div id="template">
 
         </div>
     </section>
-    <script src="./cv.js"></script>
 </body>
 </html>

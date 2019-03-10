@@ -1,29 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=ABeeZee|Josefin+Sans|Courgette|Raleway');
-body{
-	margin: 0;
-    background-color: #87CEFA;
+body {
+    margin: 0;
+}
+section {
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 10px;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    margin: 10px;
+}
+#userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 ul{
-    text-decoration: none;
+    padding: 10px;
 }
 li{
-    list-style: none;
+    padding: 10px;
 }
-input{
-    display: flex;
-    margin: 20px;
-}
-button{
-    cursor: pointer;
-}
-#info > div{
-    position: relative;
-}
-#buttonLang{
-    position: absolute;
-    left: 200px;
-    bottom: 0;
-}
-#buttonConfirm{
-    margin-left: 20px;
+#template {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
 }

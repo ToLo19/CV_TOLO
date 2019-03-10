@@ -1,33 +1,38 @@
-const idTag = (id) => {
+const byIdValue = (id) => {
     return document.getElementById(id).value;
 }
-/// content Tag
-const userInfo = document.getElementById('userInformation')
 
+class User {
+    constructor (firstname, lastname, phone) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.phone = phone;
+        this.arr = [this.firstname, this.lastname, this.phone];
+    } 
 
-class UserInfo {
-    constructor(firstName,lastName, number) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.number = number;
-    }
-    createUserInformation() {
+    // Создает tag и вписывает в него значения 
+    createTag () {
         let ul = document.createElement('ul');
-        let li = document.createElement('li');
-        li.innerHTML = this.firstName;
-        li.innerHTML = this.lastName;
-        li.innerHTML = this.number;
-        ul.appendChild(li);
-        userInfo.appendChild(ul);
+        let template = document.getElementById('template');
+        this.arr.map(value => {
+            let li = document.createElement('li');
+            li.innerHTML = value;
+            ul.appendChild(li);
+        })
+        template.appendChild(ul);
+        
     }
 }
 
-const takeUserInformation = () => {
-    const firstName = idTag('firstName');
-    const lastName = idTag('lastName');
-    const number = idTag('number');
-    const userInfo = new UserInfo(firstName, lastName, number);
-    return userInfo.createUserInformation();
-
+// Берет значения input и вставляет их в constructer, затем создает tag
+let createNewUser = () => {
+    let firstnameValue = document.getElementById('firstname').value;
+    let lastnameValue = document.getElementById('lastname').value;
+    let phoneValue = document.getElementById('phone').value;
+    let newUser = new User(firstnameValue, lastnameValue, phoneValue);
+    if (firstnameValue && lastnameValue && phoneValue) {
+        newUser.createTag();
+    } else {
+        alert('Заполнте все поля!');
+    }
 }
-
