@@ -5,19 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="cv new.css">
-    <script src="cv new.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="cv.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <script src="cv.js"></script>
 </head>
 <body>
     <section>
         <div id="userInfo">
-            <input type="text" id="firstname">
-            <input type="text" id="lastname">
-            <input type="number" id="phone">
-            <button id="buttonConfirm" onclick="createNewUser()">Confirm</button>
+            <input type="text" id="firstname" placeholder="Firstname">
+            <input type="text" id="lastname" placeholder="Lastname">
+            <div id="polDiv">
+                <p>Male</p> <input type="radio" name="pol" id="male">
+                <p>Female</p> <input type="radio" name="pol" id="female">
+            </div>
+            <input type="number" id="phone" placeholder="Phone number">
+            <input type="text" id="email" placeholder="E-mail">
+            <h3>Driver license</h3>
+            <div id="licenseDiv">
+                <p>Yes</p> <input type="radio" name="licenseRadio">
+                <p>No</p> <input type="radio" name="licenseRadio">
+            </div>
+            <div id="languageDiv">
+                <input type="text" class="language" placeholder="Language(s)">
+                <button id="moreLanguagesButton" onclick="createMoreLanguages()"><i class='fas fa-plus-square' style='font-size:20px'></i></button>
+            </div>
+            <div id="workDiv">
+                <input type="text" class="work" placeholder="Work(s) at">
+                <button id="moreWorkButton" onclick="createMoreWork()"><i class='fas fa-plus-square' style='font-size:20px'></i></button>
+                <div>
+                    <input type="number" class="since" placeholder="Since" >
+                    <input type="number" class="untill" placeholder="Untill">
+                </div>
+            </div>
         </div>
+        
     </section>
-
+    <button id="buttonConfirm" onclick="createNewUser()">Confirm</button>
     <section>
         <div id="template">
 

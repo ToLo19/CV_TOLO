@@ -1,32 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Arima+Madurai|Courgette|Josefin+Sans');
 body {
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Arima Madurai', cursive;
+
 }
 section {
-    width: 100%;
-    height: 50vh;
-    margin-bottom: 10px;
+    width: 50%;
+    height: 100vh;
     background-color: bisque;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-right: 1px solid black;
+}
+button{
+    cursor: pointer;
 }
 input {
     margin: 10px;
+
 }
 #userInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }
 ul{
     padding: 10px;
 }
 li{
+    list-style: none;
     padding: 10px;
 }
 #template {
-    width: 600px;
-    height: 300px;
+    width: 90%;
+    height: 90%;
     border: 1px solid black;
 }
+#languageDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 3px 4px black;
+    background-color: lightseagreen;
+}
+#moreLanguagesButton{
+    position: absolute;
+    left: 200px;
+    bottom: 10px;
+}
+#workDiv{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: lightskyblue;
+    box-shadow: 2px 3px 4px black;
+}
+#workDiv > div > input{
+    width: 70px;
+}
+#moreWorkButton{
+    position: absolute;
+    left: 200px;
+    bottom: 10px;
+}
+#polDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#licenseDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    margin-bottom: 0;
+}
+#userInfo button{
+    padding: 0;
+    border: 0;
+    width: 0;
+}
+
