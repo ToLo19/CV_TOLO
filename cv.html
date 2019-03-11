@@ -41,7 +41,8 @@
             </div>
             <div id="skillsDiv">
                     <input type="text" class="skills" placeholder="Skill(s)">
-                    <input type="range" min="1" max="100" value="0" class="skillsRange" onchange="showSkillsRange()">
+                    <input type="range" min="1" max="100" value="0" class="skillsRange" oninput="showSkillsRange()">
+                    <p id="value"></p>
                     <button id="moreSkillsButton" onclick="createMoreSkills()"><i class='fas fa-plus-square' style='font-size:20px'></i></button>
             </div>
         </div>

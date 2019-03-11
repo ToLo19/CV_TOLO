@@ -1,7 +1,6 @@
 const byIdValue = (id) => {
     return document.getElementById(id).value;
 }
-
 class User {
     constructor (firstname, lastname, phone) {
         this.firstname = firstname;
@@ -135,8 +134,6 @@ let createMoreWork = () => {
 // Выводит значение range
 let showSkillsRange = () => {
     let div = document.getElementById('skillsDiv');
-    let range = document.getElementsByClassName('skillsRange');
-    let create = document.createElement('p');
-    div.appendChild(create);
-    create.innerHTML = range.value;
+    let range = document.getElementsByClassName('skillsRange')[0];
+    let create = document.getElementById('value').innerHTML = range.value
 }
